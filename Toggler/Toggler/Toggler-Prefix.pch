@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Toggler' target in the 'Toggler' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
