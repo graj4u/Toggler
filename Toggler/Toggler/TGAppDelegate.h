@@ -11,9 +11,13 @@
 @interface TGAppDelegate : NSObject <NSApplicationDelegate> {
     BOOL on;
     int pid;
+    IBOutlet NSMenu *theMenu;
 }
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong) NSStatusItem *item;
+
+- (IBAction)showAbout:(id)sender;
+- (IBAction)changeScreenSaver:(id)sender;
 
 @end

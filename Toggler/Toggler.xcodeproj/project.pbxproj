@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62395CB8167E5A49003CFBAA /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62395CB7167E5A49003CFBAA /* libex64.a */; };
+		62395CB9167E5A49003CFBAA /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62395CB7167E5A49003CFBAA /* libex64.a */; };
+		62395CC0167E60F4003CFBAA /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62395CBF167E60F4003CFBAA /* ScriptingBridge.framework */; };
 		62E273CE167CF84900FD84D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E273CD167CF84900FD84D5 /* Cocoa.framework */; };
 		62E273D8167CF84900FD84D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62E273D6167CF84900FD84D5 /* InfoPlist.strings */; };
 		62E273DA167CF84900FD84D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E273D9167CF84900FD84D5 /* main.m */; };
@@ -21,8 +24,6 @@
 		62E2740D167D047800FD84D5 /* toggle_Off.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740A167D047700FD84D5 /* toggle_Off.png */; };
 		62E2740E167D047800FD84D5 /* toggle_On.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740B167D047700FD84D5 /* toggle_On.png */; };
 		62E2740F167D047800FD84D5 /* toggle_On.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740B167D047700FD84D5 /* toggle_On.png */; };
-		62E27412167D050A00FD84D5 /* TGStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E27411167D050A00FD84D5 /* TGStatusItem.m */; };
-		62E27413167D050A00FD84D5 /* TGStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E27411167D050A00FD84D5 /* TGStatusItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62395CB7167E5A49003CFBAA /* libex64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libex64.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug/libex64.a"; sourceTree = "<group>"; };
+		62395CBF167E60F4003CFBAA /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		62E273C9167CF84900FD84D5 /* Toggler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toggler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E273CD167CF84900FD84D5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		62E273D0167CF84900FD84D5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,8 +60,6 @@
 		62E273F7167CF84900FD84D5 /* TogglerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TogglerTests.m; sourceTree = "<group>"; };
 		62E2740A167D047700FD84D5 /* toggle_Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_Off.png; sourceTree = "<group>"; };
 		62E2740B167D047700FD84D5 /* toggle_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_On.png; sourceTree = "<group>"; };
-		62E27410167D050A00FD84D5 /* TGStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TGStatusItem.h; path = StatusItem/TGStatusItem.h; sourceTree = "<group>"; };
-		62E27411167D050A00FD84D5 /* TGStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TGStatusItem.m; path = StatusItem/TGStatusItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62395CC0167E60F4003CFBAA /* ScriptingBridge.framework in Frameworks */,
 				62E273CE167CF84900FD84D5 /* Cocoa.framework in Frameworks */,
+				62395CB8167E5A49003CFBAA /* libex64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,7 @@
 			files = (
 				62E273EC167CF84900FD84D5 /* SenTestingKit.framework in Frameworks */,
 				62E273ED167CF84900FD84D5 /* Cocoa.framework in Frameworks */,
+				62395CB9167E5A49003CFBAA /* libex64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 		62E273CC167CF84900FD84D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62395CBF167E60F4003CFBAA /* ScriptingBridge.framework */,
 				62E273CD167CF84900FD84D5 /* Cocoa.framework */,
 				62E273EB167CF84900FD84D5 /* SenTestingKit.framework */,
 				62E273CF167CF84900FD84D5 /* Other Frameworks */,
@@ -127,8 +132,6 @@
 				62E27418167D0EBE00FD84D5 /* Categories */,
 				62E273DF167CF84900FD84D5 /* TGAppDelegate.h */,
 				62E273E0167CF84900FD84D5 /* TGAppDelegate.m */,
-				62E27410167D050A00FD84D5 /* TGStatusItem.h */,
-				62E27411167D050A00FD84D5 /* TGStatusItem.m */,
 				62E273E2167CF84900FD84D5 /* MainMenu.xib */,
 				62E27407167D047700FD84D5 /* Resources */,
 				62E273D4167CF84900FD84D5 /* Supporting Files */,
@@ -170,6 +173,7 @@
 		62E27407167D047700FD84D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62395CB7167E5A49003CFBAA /* libex64.a */,
 				62E27408167D047700FD84D5 /* Images */,
 			);
 			path = Resources;
@@ -314,7 +318,6 @@
 			files = (
 				62E273DA167CF84900FD84D5 /* main.m in Sources */,
 				62E273E1167CF84900FD84D5 /* TGAppDelegate.m in Sources */,
-				62E27412167D050A00FD84D5 /* TGStatusItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E273F8167CF84900FD84D5 /* TogglerTests.m in Sources */,
-				62E27413167D050A00FD84D5 /* TGStatusItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +432,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Toggler/Toggler-Prefix.pch";
 				INFOPLIST_FILE = "Toggler/Toggler-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Toggler/Resources\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,9 +451,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Toggler/Toggler-Prefix.pch";
 				INFOPLIST_FILE = "Toggler/Toggler-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Toggler/Resources\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,6 +475,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Toggler/Toggler-Prefix.pch";
 				INFOPLIST_FILE = "TogglerTests/TogglerTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Toggler/Resources\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -474,6 +495,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Toggler/Toggler-Prefix.pch";
 				INFOPLIST_FILE = "TogglerTests/TogglerTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Toggler/Resources\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
