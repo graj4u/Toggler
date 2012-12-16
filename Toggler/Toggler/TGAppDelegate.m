@@ -7,6 +7,8 @@
 //
 
 #import "TGAppDelegate.h"
+
+
 #define _assert(x) (nil != x)
 #define _assertP(x) (&x != NULL)
 #define _default(x) [self getDefault:(x)]
@@ -77,7 +79,7 @@
         on = ( !on );
         if ( on ) {
             [self.item setImage:[self getDefault:@"image"]];
-
+            NSLog(@"Turning on screen saver...");
             // Declare with wider scope
             
             // Run as async queue
@@ -106,7 +108,7 @@
             
             // execute
             FILE *filePtr = popen(cmd, "r");
-            char response[128] = { "\x0" };
+            char response[320] = { "\x0" };
             
             // Return response
             fgets(response, sizeof(response), filePtr);
@@ -117,9 +119,11 @@
             
             
         } else {
+            NSLog(@"Turning off screen saver...");
             [self.item setImage:[self getDefault:@"altImage"]];
             if ( pid > 0 ) {
-                kill(pid, SIGABRT);
+                NSLog(@"Killing pid %d", pid);
+                system("pkill -9 ScreenSaverEngine");
             }
         }
     }
