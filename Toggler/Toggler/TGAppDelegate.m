@@ -41,8 +41,8 @@
     
     [self.item setEnabled:1];
     
-    if ( !_assert(localStringKey) ) { localStringKey = _default(@"title"); }
-    [self.item setTitle:NSLocalizedString(localStringKey, nil)];
+//    if ( !_assert(localStringKey) ) { localStringKey = _default(@"title"); }
+//    [self.item setTitle:NSLocalizedString(localStringKey, nil)];
     
     if ( !_assert(img) ) { img = _default(@"image"); }
     [self.item setImage:[NSImage imageNamed:img]];
@@ -78,7 +78,7 @@
     @try {
         on = ( !on );
         if ( on ) {
-            [self.item setImage:[self getDefault:@"image"]];
+            [self.item setImage:[self getDefault:@"altimage"]];
             NSLog(@"Turning on screen saver...");
             // Declare with wider scope
             
@@ -120,7 +120,7 @@
             
         } else {
             NSLog(@"Turning off screen saver...");
-            [self.item setImage:[self getDefault:@"altImage"]];
+            [self.item setImage:[self getDefault:@"image"]];
             if ( pid > 0 ) {
                 NSLog(@"Killing pid %d", pid);
                 system("pkill -9 ScreenSaverEngine");
