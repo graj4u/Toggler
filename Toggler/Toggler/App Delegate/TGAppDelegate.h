@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TGAppDelegate : NSObject <NSApplicationDelegate> {
+@interface TGAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate> {
     BOOL on;
     int pid;
     IBOutlet NSMenu *theMenu;
+    NSWindowController *wCon;
 }
 
 @property (assign) IBOutlet NSWindow *window;

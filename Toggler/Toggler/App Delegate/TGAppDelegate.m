@@ -7,7 +7,7 @@
 //
 
 #import "TGAppDelegate.h"
-#import <ScriptingBridge/ScriptingBridge.h>
+#import "TGClickView.h"
 
 
 #define _assert(x) (nil != x)
@@ -37,11 +37,13 @@
 
 - (void)buildStatusBarIcon {
     
-    self.item = [[NSStatusBar systemStatusBar] statusItemWithLength:30];
+    self.item = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [self setDefaultsWithState:0 imageNamed:@"toggle_Off" altImageName:@"toggle_Off" title:@"Toggle" target:self action:@selector(onClick:)];
     
 }
 
+
+// TODO: Fix me
 - (void)setDefaultsWithState:(int)startingState
                   imageNamed:(NSString *)img
                 altImageName:(NSString *)altImg
@@ -50,18 +52,28 @@
                       action:(SEL)sel {
     
     [self.item setEnabled:1];
+    TGClickView *itemView = [[TGClickView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, 20, 20))];
+    itemView.target = self;
+    itemView.action = @selector(onClick:);
+    itemView.rightAction = @selector(showMenu:);
     
-    if ( !_assert(img) ) { img = _default(@"image"); }
-    [self.item setImage:[NSImage imageNamed:img]];
+    NSImage *img_ = _default(@"image");
+    img_.size = itemView.frame.size;
+//    self.item.image = img_;
     
-    if ( !_assertP(startingState) ) { startingState = !(_default(@"highlight")); }
-    [self.item setHighlightMode:startingState];
+    itemView.image = [NSImage imageNamed:img];
+    [self.item setView:itemView];
     
-    if ( !_assert(tgt) ) { tgt = _default(@"target"); }
-    [self.item setTarget:tgt];
     
-    if ( !_assert(sel) ) { sel = NSSelectorFromString(_default(@"sel")); }
-    [self.item setAction:sel];
+    
+//    if ( !_assertP(startingState) ) { startingState = !(_default(@"highlight")); }
+//    [self.item setHighlightMode:startingState];
+//    
+//    if ( !_assert(tgt) ) { tgt = _default(@"target"); }
+//    [self.item setTarget:tgt];
+//    
+//    if ( !_assert(sel) ) { sel = NSSelectorFromString(_default(@"sel")); }
+//    [self.item setAction:sel];
     
    
 }
@@ -79,7 +91,7 @@
 }
 
 - (void)onClick:(id)sender {
-    
+        
     // Try-catch in case the pkill gets the wrong
     // pid... I think it had -1 originally, which
     // actually kills all current user processes.
@@ -119,20 +131,15 @@
     
 }
 
+- (void)showMenu: (id)sender {
+    [self.item popUpStatusItemMenu:self.item.menu];
+}
+
 
 - (void)buildMenu {
-    
-    
 
-    if ( !theMenu ) {
-        NSLog(@"**ERROR** Couldn't build menu.");
-        return;
-    }
-
-    
-    [self.item setMenu:theMenu];
-
-    
+    if ( !self.item.menu )
+        [self.item setMenu:theMenu];
 }
 
 - (void)checkForUpdate {
@@ -159,6 +166,13 @@
     NSLog(@"\n\n"
           @"Last updated version: %@\n"
           @"This app's version: %@", updatedVer, currVer);
+    
+    if ( ![updatedVer isEqualToString:currVer] ) {
+        NSLog(@"\n\nAn update is available!\n"
+              @"Update now?\n"
+              @"=============\n"
+              @"Automatically update in the future?\n");
+    }
 
 }
 
@@ -196,21 +210,40 @@
 }
 
 
+- (void)loadAboutWindow {
+    
+    wCon = [[NSWindowController alloc] initWithWindowNibName:@"AboutMenu" owner:self];
+    [[wCon window] setOneShot:1];
+    [wCon showWindow:self];
+
+}
+
 - (IBAction)showAbout:(id)sender {
     
-    NSLog(@"\n\n"
-          @"Toggler\n"
-          @"By Miles Alden\n"
-          @"============\n"
-          @"A simple tool for animating\n"
-          @"your wallpaper with a screensaver\n"
-          @"of your choice.\n"
-          @"It's really nothing fancy. ;-)\n"
-          @"\n"
-          @"www.milesalden.com" );
-          
+    if ( nil == wCon ) {
+        
+        [self loadAboutWindow];
+    } else {
+        
+        [wCon close];
+        wCon = nil;
+        [self loadAboutWindow];
+    }
+    
+//    NSLog(@"\n\n"
+//          @"Toggler\n"
+//          @"By Miles Alden\n"
+//          @"============\n"
+//          @"A simple tool for animating\n"
+//          @"your wallpaper with a screensaver\n"
+//          @"of your choice.\n"
+//          @"It's really nothing fancy. ;-)\n"
+//          @"\n"
+//          @"www.milesalden.com" );
+    
     
 }
+
 
 - (IBAction)changeScreenSaver:(id)sender {
 
