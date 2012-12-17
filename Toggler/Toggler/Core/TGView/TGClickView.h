@@ -1,6 +1,6 @@
 //
 //  TGClickView.h
-//  Toggler
+//  TGToggler
 //
 //  Created by Miles Alden on 12/16/12.
 //  Copyright (c) 2012 Miles Alden. All rights reserved.

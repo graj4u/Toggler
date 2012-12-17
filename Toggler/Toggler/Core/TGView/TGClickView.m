@@ -1,6 +1,6 @@
 //
 //  TGClickView.m
-//  Toggler
+//  TGToggler
 //
 //  Created by Miles Alden on 12/16/12.
 //  Copyright (c) 2012 Miles Alden. All rights reserved.
@@ -26,15 +26,20 @@
     } else {
         [NSApp sendAction:self.action to:self.target from:self];
     }
+    
 }
 - (void)rightMouseUp:(NSEvent *)event {
     [NSApp sendAction:self.rightAction to:self.target from:self];
 }
 
+- (void)updateImage {
+    [self.image drawInRect:self.bounds fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+}
+
 - (void)drawRect:(NSRect)dirtyRect
 {
     // Drawing code here.
-    [self.image drawInRect:self.bounds fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+    [self updateImage];
 }
 
 @end

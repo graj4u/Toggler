@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Toggler' target in the 'Toggler' project
+// Prefix header for all source files of the 'TGToggler' target in the 'TGToggler' project
 //
 
 #ifdef __OBJC__
