@@ -10,14 +10,13 @@
 #import "TGConstants.h"
 #import "TGClickView.h"
 #import "TGMenuManager.h"
-#import "TGUpdater.h"
 
 static TGToggler *toggler = nil;
 
 @implementation TGToggler
 
 - (void)launch {
-    NSLog(@"Launching Toggler_v%@", updater.ver);
+    NSLog(@"Launching Toggler_v%@", self.updater.ver);
 }
 
 + (TGToggler *)toggler {
@@ -32,7 +31,6 @@ static TGToggler *toggler = nil;
 
 - (id)init {
     
-    NSLog(@"MARK");
     // Insert code here to initialize your application
     if ( self = [super init] ) {
         self.on = 0;
@@ -63,14 +61,14 @@ static TGToggler *toggler = nil;
     if ( nil == menuManager ) {
         menuManager = [[TGMenuManager alloc] init];
     }
-    if ( nil == updater ) {
-        updater = [[TGUpdater alloc] init];
+    if ( nil == self.updater ) {
+        self.updater = [[TGUpdater alloc] init];
     }
     
 
     [self buildStatusBarIcon];
     [self buildMenu];
-    [updater checkForUpdate];
+    [self.updater checkForUpdate];
 
 }
 

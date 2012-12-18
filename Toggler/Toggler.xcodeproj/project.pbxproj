@@ -11,6 +11,13 @@
 		625129BC167EEEEB008E75A4 /* AboutMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625129B9167EEEEB008E75A4 /* AboutMenu.xib */; };
 		625129D0167EEF0D008E75A4 /* TGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 625129C7167EEF0D008E75A4 /* TGAppDelegate.m */; };
 		625129D1167EEF0D008E75A4 /* TGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 625129C7167EEF0D008E75A4 /* TGAppDelegate.m */; };
+		625AC804167FEFB0005D3832 /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625AC803167FEFB0005D3832 /* libex64.a */; };
+		625AC805167FEFB0005D3832 /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625AC803167FEFB0005D3832 /* libex64.a */; };
+		625AC81F168007EF005D3832 /* Off.png in Resources */ = {isa = PBXBuildFile; fileRef = 625AC81D168007EF005D3832 /* Off.png */; };
+		625AC820168007EF005D3832 /* Off.png in Resources */ = {isa = PBXBuildFile; fileRef = 625AC81D168007EF005D3832 /* Off.png */; };
+		625AC821168007EF005D3832 /* On.png in Resources */ = {isa = PBXBuildFile; fileRef = 625AC81E168007EF005D3832 /* On.png */; };
+		625AC822168007EF005D3832 /* On.png in Resources */ = {isa = PBXBuildFile; fileRef = 625AC81E168007EF005D3832 /* On.png */; };
+		625AC8271680DB2D005D3832 /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 625AC8261680DB2D005D3832 /* icons.icns */; };
 		62E273CE167CF84900FD84D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E273CD167CF84900FD84D5 /* Cocoa.framework */; };
 		62E273D8167CF84900FD84D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62E273D6167CF84900FD84D5 /* InfoPlist.strings */; };
 		62E273DA167CF84900FD84D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E273D9167CF84900FD84D5 /* main.m */; };
@@ -24,8 +31,6 @@
 		62E2740D167D047800FD84D5 /* toggle_Off.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740A167D047700FD84D5 /* toggle_Off.png */; };
 		62E2740E167D047800FD84D5 /* toggle_On.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740B167D047700FD84D5 /* toggle_On.png */; };
 		62E2740F167D047800FD84D5 /* toggle_On.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E2740B167D047700FD84D5 /* toggle_On.png */; };
-		7D188A43167FB94C00FAA3AC /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D188A42167FB94C00FAA3AC /* libex64.a */; };
-		7D188A44167FB94C00FAA3AC /* libex64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D188A42167FB94C00FAA3AC /* libex64.a */; };
 		7D188A91167FCCA800FAA3AC /* TGMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D188A85167FCCA800FAA3AC /* TGMenuManager.m */; };
 		7D188A92167FCCA800FAA3AC /* TGMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D188A85167FCCA800FAA3AC /* TGMenuManager.m */; };
 		7D188A93167FCCA800FAA3AC /* TGClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D188A88167FCCA800FAA3AC /* TGClickView.m */; };
@@ -52,6 +57,10 @@
 		625129BA167EEEEB008E75A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutMenu.xib; sourceTree = "<group>"; };
 		625129C6167EEF0D008E75A4 /* TGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TGAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		625129C7167EEF0D008E75A4 /* TGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TGAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		625AC803167FEFB0005D3832 /* libex64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libex64.a; path = "../../../../../Library/Developer/Xcode/DerivedData/ex-aihzffyxzlnqyeetfwbrqhsdfhwe/Build/Products/Debug/libex64.a"; sourceTree = "<group>"; };
+		625AC81D168007EF005D3832 /* Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Off.png; sourceTree = "<group>"; };
+		625AC81E168007EF005D3832 /* On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = On.png; sourceTree = "<group>"; };
+		625AC8261680DB2D005D3832 /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 		62E273C9167CF84900FD84D5 /* Toggler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toggler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E273CD167CF84900FD84D5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		62E273D0167CF84900FD84D5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -71,7 +80,6 @@
 		62E273F7167CF84900FD84D5 /* TogglerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TogglerTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		62E2740A167D047700FD84D5 /* toggle_Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_Off.png; sourceTree = "<group>"; };
 		62E2740B167D047700FD84D5 /* toggle_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle_On.png; sourceTree = "<group>"; };
-		7D188A42167FB94C00FAA3AC /* libex64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libex64.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/ex-etkmncgonsfdmhefltzgrutkqfsn/Build/Products/Debug/libex64.a"; sourceTree = "<group>"; };
 		7D188A81167FCCA800FAA3AC /* TGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TGConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7D188A84167FCCA800FAA3AC /* TGMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TGMenuManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7D188A85167FCCA800FAA3AC /* TGMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TGMenuManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -90,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E273CE167CF84900FD84D5 /* Cocoa.framework in Frameworks */,
-				7D188A43167FB94C00FAA3AC /* libex64.a in Frameworks */,
+				625AC804167FEFB0005D3832 /* libex64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +108,7 @@
 			files = (
 				62E273EC167CF84900FD84D5 /* SenTestingKit.framework in Frameworks */,
 				62E273ED167CF84900FD84D5 /* Cocoa.framework in Frameworks */,
-				7D188A44167FB94C00FAA3AC /* libex64.a in Frameworks */,
+				625AC805167FEFB0005D3832 /* libex64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,9 +124,20 @@
 			path = "App Delegate";
 			sourceTree = "<group>";
 		};
+		625AC81C168007EF005D3832 /* Full size */ = {
+			isa = PBXGroup;
+			children = (
+				625AC81D168007EF005D3832 /* Off.png */,
+				625AC81E168007EF005D3832 /* On.png */,
+			);
+			name = "Full size";
+			path = "Toggle States/Full size";
+			sourceTree = "<group>";
+		};
 		62E273BE167CF84900FD84D5 = {
 			isa = PBXGroup;
 			children = (
+				625AC8261680DB2D005D3832 /* icons.icns */,
 				62E273D3167CF84900FD84D5 /* Toggler */,
 				62E273F0167CF84900FD84D5 /* TogglerTests */,
 				62E273CC167CF84900FD84D5 /* Frameworks */,
@@ -203,7 +222,7 @@
 		62E27407167D047700FD84D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D188A42167FB94C00FAA3AC /* libex64.a */,
+				625AC803167FEFB0005D3832 /* libex64.a */,
 				62E27408167D047700FD84D5 /* Images */,
 			);
 			path = Resources;
@@ -212,6 +231,7 @@
 		62E27408167D047700FD84D5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				625AC81C168007EF005D3832 /* Full size */,
 				62E27409167D047700FD84D5 /* Toggle States */,
 			);
 			path = Images;
@@ -361,6 +381,9 @@
 				62E2740E167D047800FD84D5 /* toggle_On.png in Resources */,
 				625129BB167EEEEB008E75A4 /* AboutMenu.xib in Resources */,
 				7D8A7B75167FDD01002A39E4 /* DropDown.xib in Resources */,
+				625AC81F168007EF005D3832 /* Off.png in Resources */,
+				625AC821168007EF005D3832 /* On.png in Resources */,
+				625AC8271680DB2D005D3832 /* icons.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +396,8 @@
 				62E2740F167D047800FD84D5 /* toggle_On.png in Resources */,
 				625129BC167EEEEB008E75A4 /* AboutMenu.xib in Resources */,
 				7D8A7B76167FDD01002A39E4 /* DropDown.xib in Resources */,
+				625AC820168007EF005D3832 /* Off.png in Resources */,
+				625AC822168007EF005D3832 /* On.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

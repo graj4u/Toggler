@@ -7,20 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TGUpdater.h"
 
-
-@class TGClickView, TGMenuManager, TGUpdater;
+@class TGClickView, TGMenuManager;
 
 @interface TGToggler : NSObject {
 
     TGMenuManager *menuManager;
-    TGUpdater *updater;
+
     
 }
 
 @property BOOL on;
 @property int pid;
 @property (strong) NSStatusItem *item;
+@property (strong) TGUpdater *updater;
 
 + (TGToggler *)toggler;
 - (void)launch;

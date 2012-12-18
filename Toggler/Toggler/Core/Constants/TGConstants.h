@@ -22,3 +22,15 @@
 #define DB_URL @"http://localhost/toggler/currentVersion/"
 #define REL_URL @"https://google.com/"
 #define UPDATE_URL ( DEBUG ) ? DB_URL : REL_URL
+
+#define kAboutMessage [NSString stringWithFormat:@"\n\n"\
+                                                @"TGToggler v%@\n"\
+                                                @"By Miles Alden\n"\
+                                                @"============\n"\
+                                                @"A simple tool for animating\n"\
+                                                @"your wallpaper with a screensaver\n"\
+                                                @"of your choice.\n"\
+                                                @"It's really nothing fancy. ;-)\n"\
+                                                @"\n"\
+                                                @"www.milesalden.com",\
+                                                [[[TGToggler toggler] updater] ver]]

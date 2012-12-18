@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
 		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">3081</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">3081</string>
+			<string key="NS.object.0">2844</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBNSLayoutConstraint</string>
@@ -38,7 +38,7 @@
 			<object class="NSWindowTemplate" id="589080508">
 				<int key="NSWindowStyleMask">31</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{1778, 1204}, {355, 214}}</string>
+				<string key="NSWindowRect">{{1813, 1204}, {355, 214}}</string>
 				<int key="NSWTFlags">-1535638528</int>
 				<string key="NSWindowTitle">About Toggler</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -69,6 +69,7 @@ ZWFsbHkgbm90aGluZyBmYW5jeS4gOy0pCgp3d3cubWlsZXNhbGRlbi5jb20</string>
 								</object>
 								<string key="NSCellIdentifier">_NS:1535</string>
 								<reference key="NSControlView" ref="747629599"/>
+								<int key="NSTag">55</int>
 								<object class="NSColor" key="NSBackgroundColor">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
@@ -97,7 +98,7 @@ ZWFsbHkgbm90aGluZyBmYW5jeS4gOy0pCgp3d3cubWlsZXNhbGRlbi5jb20</string>
 					<reference key="NSNextKeyView" ref="747629599"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1920, 1058}}</string>
+				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>

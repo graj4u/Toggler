@@ -77,9 +77,13 @@
     NSArray *items = @[about,sep,change,quit];
 
     for ( NSMenuItem *item in items ) {
-        [item setEnabled:1];
         [menu addItem:item];
+        [item setEnabled:YES];
     }
+    
+    [about setTarget:self];
+    [change setTarget:self];
+    
     
     return menu;
 }
@@ -91,7 +95,8 @@
 - (void)loadAboutWindow {
     
     wCon = [[NSWindowController alloc] initWithWindowNibName:@"AboutMenu" owner:self];
-    //    [[wCon window] setOneShot:1];
+    NSTextFieldCell *label = (NSTextFieldCell*)[[[wCon window] contentView] viewWithTag:55];
+    [label setTitle:kAboutMessage];
     [wCon showWindow:self];
     
 }
@@ -108,16 +113,7 @@
         [self loadAboutWindow];
     }
     
-    NSLog(@"\n\n"
-          @"TGToggler\n"
-          @"By Miles Alden\n"
-          @"============\n"
-          @"A simple tool for animating\n"
-          @"your wallpaper with a screensaver\n"
-          @"of your choice.\n"
-          @"It's really nothing fancy. ;-)\n"
-          @"\n"
-          @"www.milesalden.com" );
+    NSLog(kAboutMessage);
 }
 
 - (IBAction)changeScreenSaver:(id)sender {
