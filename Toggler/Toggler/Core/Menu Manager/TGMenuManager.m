@@ -8,6 +8,7 @@
 
 #import "TGMenuManager.h"
 #import "TGConstants.h"
+#import "NSWindow+TGWindowAdditions.h"
 
 @implementation TGMenuManager
 
@@ -18,6 +19,21 @@
     }
     
     return self;
+}
+
+NSString *aboutMessage() {
+    
+    return [NSString stringWithFormat:@"\n\n"\
+            @"TGToggler v%@\n"\
+            @"By Miles Alden\n"\
+            @"============\n"\
+            @"A simple tool for animating\n"\
+            @"your wallpaper with a screensaver\n"\
+            @"of your choice.\n"\
+            @"It's really nothing fancy. ;-)\n"\
+            @"\n"\
+            @"www.milesalden.com",\
+            [[[TGToggler toggler] updater] ver]];
 }
 
 - (void)onClick:(id)sender {
@@ -94,26 +110,54 @@
 
 - (void)loadAboutWindow {
     
-    wCon = [[NSWindowController alloc] initWithWindowNibName:@"AboutMenu" owner:self];
-    NSTextFieldCell *label = (NSTextFieldCell*)[[[wCon window] contentView] viewWithTag:55];
-    [label setTitle:kAboutMessage];
+    if ( nil != [wCon window] ) {
+        [wCon showWindow:self];
+        [[wCon window] makeKeyAndOrderFront:self];
+        return;
+    }
+    
+    __autoreleasing NSMutableArray *array = [NSMutableArray array];
+    __autoreleasing NSMutableArray **arr = &array;
+    
+    [[NSBundle mainBundle] loadNibNamed:@"AboutMenu" owner:self topLevelObjects:arr];
+    if ( nil == array ) {
+        NSLog(@"**ERROR** Couldn't initialize about window.");
+        return;
+    }
+    
+    NSPanel *panel;
+    for ( id obj in array ) {
+        if ( [obj isKindOfClass:[NSPanel class]] ) {
+            panel = obj;
+        }
+    }
+    
+    wCon = [[NSWindowController alloc] initWithWindow:panel];
+    NSTextFieldCell *label = [[[[panel contentView] subviews] objectAtIndex:0] cell];
+    [label setTitle:aboutMessage()];
+    
+    
     [wCon showWindow:self];
+    [[wCon window] makeKeyAndOrderFront:self];
     
 }
+
+
+
+
 
 - (IBAction)showAbout:(id)sender {
     
     if ( nil == wCon ) {
         
         [self loadAboutWindow];
+        
     } else {
         
-        [wCon close];
-        wCon = nil;
         [self loadAboutWindow];
     }
     
-    NSLog(kAboutMessage);
+    NSLog(@"%@", aboutMessage());
 }
 
 - (IBAction)changeScreenSaver:(id)sender {

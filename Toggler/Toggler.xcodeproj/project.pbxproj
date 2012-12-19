@@ -41,6 +41,8 @@
 		7D188A98167FCCA800FAA3AC /* TGUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D188A8E167FCCA800FAA3AC /* TGUpdater.m */; };
 		7D8A7B75167FDD01002A39E4 /* DropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A7B73167FDD01002A39E4 /* DropDown.xib */; };
 		7D8A7B76167FDD01002A39E4 /* DropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A7B73167FDD01002A39E4 /* DropDown.xib */; };
+		7DB5CA681681278000A8F492 /* NSWindow+TGWindowAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB5CA671681278000A8F492 /* NSWindow+TGWindowAdditions.m */; };
+		7DB5CA691681278000A8F492 /* NSWindow+TGWindowAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB5CA671681278000A8F492 /* NSWindow+TGWindowAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		7D188A8D167FCCA800FAA3AC /* TGUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TGUpdater.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7D188A8E167FCCA800FAA3AC /* TGUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TGUpdater.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7D8A7B74167FDD01002A39E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DropDown.xib; sourceTree = "<group>"; };
+		7DB5CA661681278000A8F492 /* NSWindow+TGWindowAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindow+TGWindowAdditions.h"; path = "Toggler/Core/NSWindow/NSWindow+TGWindowAdditions.h"; sourceTree = SOURCE_ROOT; };
+		7DB5CA671681278000A8F492 /* NSWindow+TGWindowAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWindow+TGWindowAdditions.m"; path = "Toggler/Core/NSWindow/NSWindow+TGWindowAdditions.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,8 @@
 			children = (
 				7D188A84167FCCA800FAA3AC /* TGMenuManager.h */,
 				7D188A85167FCCA800FAA3AC /* TGMenuManager.m */,
+				7DB5CA661681278000A8F492 /* NSWindow+TGWindowAdditions.h */,
+				7DB5CA671681278000A8F492 /* NSWindow+TGWindowAdditions.m */,
 			);
 			path = "Menu Manager";
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				7D188A93167FCCA800FAA3AC /* TGClickView.m in Sources */,
 				7D188A95167FCCA800FAA3AC /* TGToggler.m in Sources */,
 				7D188A97167FCCA800FAA3AC /* TGUpdater.m in Sources */,
+				7DB5CA681681278000A8F492 /* NSWindow+TGWindowAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +450,7 @@
 				7D188A94167FCCA800FAA3AC /* TGClickView.m in Sources */,
 				7D188A96167FCCA800FAA3AC /* TGToggler.m in Sources */,
 				7D188A98167FCCA800FAA3AC /* TGUpdater.m in Sources */,
+				7DB5CA691681278000A8F492 /* NSWindow+TGWindowAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

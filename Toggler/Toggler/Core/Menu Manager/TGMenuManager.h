@@ -13,7 +13,8 @@
 @interface TGMenuManager : NSObject {
     
     TGToggler *tog;
-    NSWindowController *wCon;
+    __strong NSWindowController *wCon;
+    __strong NSPanel *aboutPanel;
 
 }
 
